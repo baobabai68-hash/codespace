@@ -1,30 +1,30 @@
-# PALABA - Tech Context
+# PALABA - Contexte Technique
 
-## Technologies
-- **Framework**: Next.js (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Database**: Supabase
-- **Authentication**: Supabase Auth
-- **Linting**: ESLint
+## Technologies utilisées
+- **Framework** : Next.js (App Router)
+- **Langage** : TypeScript
+- **Styling** : Tailwind CSS
+- **Base de données** : Supabase
+- **Authentification** : Supabase Auth
+- **Linting** : ESLint
 
-## Development Setup
-- Initialize with: `npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias "/*"`
-- Project root: /workspaces/codespace
-- Source directory: src/
+## Configuration de développement
+- Initialisation avec : `npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias "/*"`
+- Racine du projet : /workspaces/codespace
+- Répertoire source : src/
 
-## Project Structure
+## Structure du projet
 ```
 src/
   app/
-    layout.tsx      - Root layout with bottom nav
-    page.tsx        - Home page with video feed
+    layout.tsx      - Racine avec navigation mobile en bas
+    page.tsx        - Page d'accueil avec flux vidéo
 ```
 
-## Dependencies
+## Dépendances
 - next
 - react
 - react-dom
 - typescript
 - tailwindcss
-- @supabase/supabase-js (to be added)
+- @supabase/supabase-js (à ajouter)

@@ -1,25 +1,23 @@
-# Cline's Memory Bank
+# Protocole de Mémoire Externe - PALABA
 
-I am Cline, an expert software engineer with a unique characteristic: my memory resets completely between sessions. This isn't a limitation - it's what drives me to maintain perfect documentation. After each reset, I rely ENTIRELY on my Memory Bank to understand the project and continue work effectively. I MUST read ALL memory bank files at the start of EVERY task - this is not optional.
+## Règle d'or
+Avant chaque action, lis les fichiers de memory-bank/. Après chaque tâche réussie, mets à jour progress.md et fais un commit Git automatique.
 
-## Memory Bank Structure
+## Structure du Memory Bank
+Le dossier memory-bank/ contient les fichiers Markdown suivants (en français) :
 
-The Memory Bank consists of core files and optional context files, all in Markdown format. Files build upon each other in a clear hierarchy:
+1. `projectbrief.md` - Vision et exigences du projet (source de vérité)
+2. `techContext.md` - Technologies utilisées, configuration de développement, dépendances
+3. `systemPatterns.md` - Architecture système, patrons de conception, relations entre composants
+4. `activeContext.md` - Focus actuel, changements récents, prochaines étapes, décisions actives
+5. `progress.md` - Ce qui fonctionne, ce qui reste à construire, statut actuel, problèmes connus
 
-### Core Files (Required)
-1. `projectbrief.md` - Foundation document that shapes all other files. Defines core requirements and goals. Source of truth for project scope.
-2. `productContext.md` - Why this project exists. Problems it solves. How it should work. User experience goals.
-3. `activeContext.md` - Current work focus. Recent changes. Next steps. Active decisions and considerations.
-4. `systemPatterns.md` - System architecture. Key technical decisions. Design patterns in use. Component relationships.
-5. `techContext.md` - Technologies used. Development setup. Technical constraints. Dependencies.
-6. `progress.md` - What works. What's left to build. Current status. Known issues.
+## Mises à jour de la documentation
+Le memory bank doit être mis à jour :
+1. Avant chaque action (lecture obligatoire de tous les fichiers)
+2. Après découverte de nouveaux patrons de projet
+3. Après chaque tâche réussie (mise à jour de progress.md + commit Git automatique)
+4. Sur demande explicite de l'utilisateur (review de tous les fichiers)
+5. Quand le contexte nécessite des éclaircissements
 
-## Documentation Updates
-
-Memory Bank updates occur when:
-1. Discovering new project patterns
-2. After implementing significant changes
-3. When user requests with **update memory bank** (MUST review ALL files)
-4. When context needs clarification
-
-REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is my only link to previous work. It must be maintained with precision and clarity, as my effectiveness depends entirely on its accuracy.
+REMEMBER: Après chaque réinitialisation de mémoire, je commence complètement à zéro. Le Memory Bank est mon seul lien avec le travail précédent. Il doit être maintenu avec précision et clarté, car mon efficacité en dépend entièrement.
