@@ -40,3 +40,11 @@ PALABA est un réseau social mobile-first, bilingue français/anglais, conçu po
 - Un **like est obligatoirement un achat de 10 FCFA** via le bouton unique **'J'aime'** (icône cœur).
 - Le bouton déclenche une modale confirmant : "Envoyer un like coûte 10 FCFA".
 - Plus de bouton "Gifting" séparé — J'aime = envoi d'un cadeau payant.
+
+### Historique de la Page Profil (Phase 2)
+- **Fonctionnalité à implémenter en Phase 2** : La page Profil de l'utilisateur disposera d'un onglet **Historique** permettant de consulter :
+  - Les **50 dernières publications vues** (historique de lecture)
+  - Les **50 dernières publications likées/giftées** (engagements positifs)
+  - Les **50 dernières publications téléchargées/partagées/mises en favoris** (interactions de partage)
+- L'onglet Historique sera présenté sous forme de liste/onglets dans la page `/profile`, accessible depuis la barre de navigation principale.
+- Cette fonctionnalité s'appuie sur les interactions utilisateur et sera connectée aux données Supabase en Phase 2.
