@@ -53,6 +53,20 @@ La page d'accueil est terminée.
 - [ ] Implémentation de l'authentification
 - [ ] Implémentation de l'upload vidéo
 - [ ] Création des pages Découvrir, Créer, Messages, Profil
+## Reste à faire (Phases futures)
+- [ ] Mise en place du client Supabase et du schéma de base de données
+- [ ] Implémentation de l'authentification
+- [ ] Implémentation de l'upload vidéo
+- [ ] Création des pages Découvrir, Créer, Messages, Profil
+- [ ] Connexion du flux aux données Supabase réelles
+- [ ] Implémentation du système de monétisation (Gifting, Marketplace)
+
+## Décisions Stratégiques Récentes
+- [x] Ajout des règles stratégiques à projectbrief.md et techContext.md
+  - Paiements sortants : Fapshi API = collecte uniquement; reversements via agrégateurs (Neero, Paysika, CinetPay) manuels par admin
+  - Programme Créateurs : critère 720h de visionnage cumulées sur 30 jours; intégration manuelle via admin
+  - Logique des Likes : un like = un achat de 10 FCFA via bouton unique "J'aime" (modale de confirmation)
+- [x] Build validé après mise à jour des fichiers mémoire
 - [ ] Connexion du flux aux données Supabase réelles
 - [ ] Implémentation du système de monétisation (Gifting, Marketplace)
 
