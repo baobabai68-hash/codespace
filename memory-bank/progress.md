@@ -76,6 +76,7 @@
 - [x] Fix scroll global sur `/create` et toutes les pages : `main` passe de `overflow-hidden` à `overflow-y-auto overscroll-y-contain pb-20` (`layout.tsx`)
 - [x] Barre de navigation en bas reste fixe (`fixed bottom-0`) et ne masque plus le contenu grâce au `pb-20` + `safe-area-bottom`
 - [x] Build validé après correction (`/create` généré statiquement)
+- [x] Ajout de la fonctionnalité **Historique Profil (Phase 2)** dans `projectbrief.md` : onglet "Historique" avec 50 dernières vues, likes/gifts, téléchargements/favoris
 
 ## Blocants
 - [x] Build validé après mise à jour des fichiers mémoire
