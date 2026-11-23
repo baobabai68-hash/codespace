@@ -38,6 +38,7 @@ La page d'accueil est terminée.
 ## Écran ② : Boutons CTA sur page d'accueil
 - [x] Bouton "Se connecter" (border white/30) → `/login`
 - [x] Bouton "Commencer" (violet bg, hover orange) → `/register`
+- [x] Bouton "Fil d'actualité" dans l'en-tête → `/feed`
 - [x] Build validé
 
 ## En cours
