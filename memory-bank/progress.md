@@ -27,6 +27,19 @@ La page d'accueil est terminée.
 - [x] Build validé (`/login` et `/register` générés statiquement)
 - [x] Erreur d'hydratation corrigée : app par défaut en français uniquement (lang="fr"), pas de détection de langue côté client
 
+## Écran ③ : Fil d'actualité (TikTok-style) créé
+- [x] Page `/feed` créée avec flux vertical snap-y, scroll mobile-first
+- [x] Cartes de publications avec mock data (4 posts variés)
+- [x] Chaque carte : avatar + nom créateur, média (placeholder gradient), boutons J'aime, Cadeau (Gifting), Commenter, Partager
+- [x] Barre de navigation fixe en bas : Accueil (/), Découvrir (/discover), + Publier (/create), Messages (/messages), Profil (/profile)
+- [x] Navigation entre Accueil et Fil d'actualité via header link "Accueil" sur /feed et BottomNav
+- [x] Build validé (`/feed` généré statiquement)
+
+## Écran ② : Boutons CTA sur page d'accueil
+- [x] Bouton "Se connecter" (border white/30) → `/login`
+- [x] Bouton "Commencer" (violet bg, hover orange) → `/register`
+- [x] Build validé
+
 ## En cours
 - Aucune
 
