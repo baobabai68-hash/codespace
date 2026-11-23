@@ -53,7 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="h-screen flex flex-col bg-black text-white">
         <div className="flex flex-col h-full">
-          <main className="flex-1 min-h-0 overflow-hidden">{children}</main>
+          <main className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain">{children}</main>
           <BottomNav />
         </div>
       </body>
