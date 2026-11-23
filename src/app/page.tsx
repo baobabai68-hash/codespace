@@ -69,15 +69,6 @@ function ShareIcon() {
   );
 }
 
-function GiftIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">
-      <path d="M19 7h-8V4a1 1 0 0 0-2 0v3H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-      <path d="M9 4v3M15 4v3M4 16h16" />
-    </svg>
-  );
-}
-
 function ActionButton({
   icon,
   label,
@@ -117,7 +108,6 @@ function VideoCard({ post }: { post: Post }) {
       {/* Right side vertical action stack */}
       <div className="absolute right-3 bottom-32 z-20 flex flex-col items-center gap-5">
         <ActionButton icon={<HeartIcon />} label="J'aime" count={formatCount(post.likes)} />
-        <ActionButton icon={<GiftIcon />} label="Cadeau" count="Gifting" />
         <ActionButton icon={<CommentIcon />} label="Commenter" count={formatCount(post.comments)} />
         <ActionButton icon={<ShareIcon />} label="Partager" count={formatCount(post.shares)} />
       </div>
