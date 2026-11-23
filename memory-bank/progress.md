@@ -27,6 +27,15 @@ La page d'accueil est terminée.
 - [x] Build validé (`/login` et `/register` générés statiquement)
 - [x] Erreur d'hydratation corrigée : app par défaut en français uniquement (lang="fr"), pas de détection de langue côté client
 
+## Écran ⑤ : Page de Publication (Créer) créée
+- [x] Page `/create` créée avec design violet/or (bg purple-brand, cards black/80)
+- [x] Accessible depuis le bouton `+ Publier` de la barre de navigation du bas
+- [x] 3 onglets en haut : Vidéo, Texte, Audio (boutons, état actif en violet)
+- [x] Zone de contenu selon l'onglet : uploader vidéo/audio, ou écrire du texte
+- [x] Champs : Description, Ajouter un hashtag, Qui peut voir ? (Public, Abonnés, Privé)
+- [x] Bouton "Publier" en violet tout en bas (hover orange)
+- [x] Build validé (`/create` généré statiquement)
+
 ## Écran ③ : Fil d'actualité (TikTok-style) créé
 - [x] Page `/feed` créée avec flux vertical snap-y, scroll mobile-first
 - [x] Cartes de publications avec mock data (4 posts variés)
