@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 // Types
 type Post = {
   id: string;
@@ -91,28 +95,22 @@ function ShareIcon() {
   );
 }
 
-function GiftIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">
-      <path d="M19 7h-8V4a1 1 0 0 0-2 0v3H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
-      <path d="M9 4v3M15 4v3M4 16h16" />
-    </svg>
-  );
-}
-
 function ActionButton({
   icon,
   label,
   count,
+  onClick,
 }: {
   icon: React.ReactNode;
   label: string;
   count: string;
+  onClick?: () => void;
 }) {
   return (
     <button
       type="button"
       aria-label={label}
+      onClick={onClick}
       className="flex flex-col items-center gap-1 text-orange-brand active:scale-90 transition-transform"
     >
       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black/30 backdrop-blur-sm border border-white/20">
@@ -123,7 +121,7 @@ function ActionButton({
   );
 }
 
-function VideoCard({ post }: { post: Post }) {
+function VideoCard({ post, onLike }: { post: Post; onLike?: (id: string) => void }) {
   return (
     <article className="relative h-screen w-full snap-start snap-always overflow-hidden bg-black">
       <div className={`absolute inset-0 bg-gradient-to-b ${post.gradient}`} aria-hidden="true" />
@@ -133,8 +131,7 @@ function VideoCard({ post }: { post: Post }) {
         </div>
       </div>
       <div className="absolute right-3 bottom-32 z-20 flex flex-col items-center gap-5">
-        <ActionButton icon={<HeartIcon />} label="J'aime" count={formatCount(post.likes)} />
-        <ActionButton icon={<GiftIcon />} label="Cadeau" count="Gifting" />
+        <ActionButton icon={<HeartIcon />} label="J'aime" count={formatCount(post.likes)} onClick={() => onLike?.(post.id)} />
         <ActionButton icon={<CommentIcon />} label="Commenter" count={formatCount(post.comments)} />
         <ActionButton icon={<ShareIcon />} label="Partager" count={formatCount(post.shares)} />
       </div>
@@ -157,6 +154,8 @@ function VideoCard({ post }: { post: Post }) {
 }
 
 export default function FeedPage() {
+  const [showLikeModal, setShowLikeModal] = useState(false);
+
   return (
     <div className="no-scrollbar h-screen snap-y snap-mandatory overflow-y-scroll bg-purple-brand">
       <header className="fixed left-0 right-0 top-0 z-40 flex items-center justify-between bg-gradient-to-b from-black/60 to-transparent px-4 pb-4 pt-3">
@@ -166,8 +165,29 @@ export default function FeedPage() {
         </div>
         <a href="/" className="rounded-full border border-white/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10">Accueil</a>
       </header>
+
+      {/* Modal "Envoyer un like coûte 10 FCFA" */}
+      {showLikeModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+          <div className="bg-gray-900 rounded-xl p-6 text-center max-w-sm mx-4 shadow-lg">
+            <h2 className="text-2xl font-bold text-white mb-2">Confirmation</h2>
+            <p className="text-orange-brand mb-4">Envoyer un like coûte 10 FCFA</p>
+            <button
+              onClick={() => setShowLikeModal(false)}
+              className="bg-purple-brand text-white px-4 py-2 rounded font-medium hover:bg-orange-brand transition-colors"
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
+
       {posts.map((post) => (
-        <VideoCard key={post.id} post={post} />
+        <VideoCard
+          key={post.id}
+          post={post}
+          onLike={() => setShowLikeModal(true)}
+        />
       ))}
     </div>
   );

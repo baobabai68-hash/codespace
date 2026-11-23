@@ -30,7 +30,8 @@ La page d'accueil est terminée.
 ## Écran ③ : Fil d'actualité (TikTok-style) créé
 - [x] Page `/feed` créée avec flux vertical snap-y, scroll mobile-first
 - [x] Cartes de publications avec mock data (4 posts variés)
-- [x] Chaque carte : avatar + nom créateur, média (placeholder gradient), boutons J'aime, Cadeau (Gifting), Commenter, Partager
+- [x] Chaque carte : avatar + nom créateur, média (placeholder gradient), boutons J'aime, Commenter, Partager
+- [x] Bouton "J'aime" = envoi de cadeau payant : modale "Envoyer un like coûte 10 FCFA" (icône cœur, déclenche la modale via useState)
 - [x] Barre de navigation fixe en bas : Accueil (/), Découvrir (/discover), + Publier (/create), Messages (/messages), Profil (/profile)
 - [x] Navigation entre Accueil et Fil d'actualité via header link "Accueil" sur /feed et BottomNav
 - [x] Build validé (`/feed` généré statiquement)
