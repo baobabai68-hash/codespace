@@ -69,6 +69,15 @@ function ShareIcon() {
   );
 }
 
+function GiftIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">
+      <path d="M19 7h-8V4a1 1 0 0 0-2 0v3H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+      <path d="M9 4v3M15 4v3M4 16h16" />
+    </svg>
+  );
+}
+
 function ActionButton({
   icon,
   label,
@@ -108,6 +117,7 @@ function VideoCard({ post }: { post: Post }) {
       {/* Right side vertical action stack */}
       <div className="absolute right-3 bottom-32 z-20 flex flex-col items-center gap-5">
         <ActionButton icon={<HeartIcon />} label="J'aime" count={formatCount(post.likes)} />
+        <ActionButton icon={<GiftIcon />} label="Cadeau" count="Gifting" />
         <ActionButton icon={<CommentIcon />} label="Commenter" count={formatCount(post.comments)} />
         <ActionButton icon={<ShareIcon />} label="Partager" count={formatCount(post.shares)} />
       </div>
@@ -135,9 +145,25 @@ export default function Home() {
   return (
     <div className="no-scrollbar h-screen snap-y snap-mandatory overflow-y-scroll bg-purple-brand">
       {/* Header */}
-      <header className="fixed left-0 right-0 top-0 z-40 flex items-baseline gap-2 bg-gradient-to-b from-black/60 to-transparent px-4 pb-4 pt-3">
-        <h1 className="text-2xl font-extrabold tracking-tight text-gold-brand">PALABA</h1>
-        <p className="text-xs font-semibold text-orange-brand">Crée. Partage. Gagne.</p>
+      <header className="fixed left-0 right-0 top-0 z-40 flex items-center justify-between bg-gradient-to-b from-black/60 to-transparent px-4 pb-4 pt-3">
+        <div className="flex items-baseline gap-2">
+          <h1 className="text-2xl font-extrabold tracking-tight text-gold-brand">PALABA</h1>
+          <p className="text-xs font-semibold text-orange-brand">Crée. Partage. Gagne.</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <a
+            href="/login"
+            className="rounded-full border border-white/30 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/10"
+          >
+            Se connecter
+          </a>
+          <a
+            href="/register"
+            className="rounded-full bg-purple-brand px-3 py-1.5 text-xs font-medium text-white shadow-lg transition-colors hover:bg-orange-brand"
+          >
+            Commencer
+          </a>
+        </div>
       </header>
 
       {/* Feed */}

@@ -21,7 +21,7 @@ function BottomNav() {
   const navItems = [
     { label: "Accueil", href: "/", icon: "🏠" },
     { label: "Découvrir", href: "/discover", icon: "🔍" },
-    { label: "Créer", href: "/create", icon: "🎥" },
+    { label: "+ Publier", href: "/create", icon: "➕" },
     { label: "Messages", href: "/messages", icon: "💬" },
     { label: "Profil", href: "/profile", icon: "👤" },
   ];
