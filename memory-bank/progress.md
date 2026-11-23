@@ -46,6 +46,16 @@
 - [x] Bouton "Fil d'actualité" → `/feed`
 - [x] Build validé
 
+## Écran ⑦ : Messages & Notifications créé
+- [x] Page `/messages` créée, moderne, élégante et mobile-first (design violet/or de PALABA)
+- [x] Accessible depuis l'icône 'Messages' (💬) dans la barre de navigation du bas (`layout.tsx`)
+- [x] 2 onglets en haut : Messages / Notifications (boutons, état actif en violet)
+- [x] Onglet Messages : liste de conversations (mock data) avec avatar, nom, dernier message, heure, badge non-lus
+- [x] Onglet Notifications : liste d'activités (ex: "Junior a aimé votre vidéo", "Amina s'est abonnée à vous") avec icônes et badges non-lus
+- [x] Bouton retour vers Accueil en haut à gauche
+- [x] Scroll vertical fonctionnel (conteneur `main` avec `overflow-y-auto pb-20`)
+- [x] Build validé (`/messages` généré statiquement)
+
 ## Écran ⑥ : Profil Personnel créé
 - [x] Page `/profile` créée, moderne, élégante et mobile-first (design violet/or de PALABA)
 - [x] Accessible depuis l'icône 'Profil' (👤) dans la barre de navigation du bas (`layout.tsx`)
