@@ -75,6 +75,11 @@ La page d'accueil est terminée.
   - Paiements sortants : Fapshi API = collecte uniquement; reversements via agrégateurs (Neero, Paysika, CinetPay) manuels par admin
   - Programme Créateurs : critère 720h de visionnage cumulées sur 30 jours; intégration manuelle via admin
   - Logique des Likes : un like = un achat de 10 FCFA via bouton unique "J'aime" (modale de confirmation)
+- [x] Fix scroll global sur `/create` et toutes les pages : `main` passe de `overflow-hidden` à `overflow-y-auto overscroll-y-contain pb-20` (`layout.tsx`)
+- [x] Barre de navigation en bas reste fixe (`fixed bottom-0`) et ne masque plus le contenu grâce au `pb-20` + `safe-area-bottom`
+- [x] Build validé après correction (`/create` généré statiquement)
+
+## Blocants
 - [x] Build validé après mise à jour des fichiers mémoire
 - [ ] Connexion du flux aux données Supabase réelles
 - [ ] Implémentation du système de monétisation (Gifting, Marketplace)
